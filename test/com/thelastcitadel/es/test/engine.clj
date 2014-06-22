@@ -18,6 +18,7 @@
                 (let [node (-> (NodeBuilder/nodeBuilder)
                                (.settings (-> (ImmutableSettings/settingsBuilder)
                                               (.put "path.data" "target/data")
+                                              (.put "script.disable_dynamic" false)
                                               (.put "cluster.name" (str "test-cluster-" (NetworkUtils/getLocalAddress)))
                                               (.put "gateway.type" "none")
                                               (.put "number_of_shards" 1)))

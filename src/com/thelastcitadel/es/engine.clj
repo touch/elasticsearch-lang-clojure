@@ -44,6 +44,8 @@
           (log/info e)
           (throw e))))))
 
+(defn -sandboxed [_] false)
+
 (defn -executable [_ compiled-script env]
   (executable-script compiled-script (into {} env)))
 
