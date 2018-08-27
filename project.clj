@@ -17,4 +17,13 @@
                 :configuration ([:toolchains
                   [:jdk
                     [:version 1.7]
-                    [:vendor "oracle"]]])}]])
+                    [:vendor "oracle"]]])}]
+                [com.theoryinpractise/clojure-maven-plugin "1.7.1"
+                 {:extensions "true"
+                  :executions ([:execution
+                                [:id "clojure-compile"]
+                                [:phase "compile"]
+                                [:configuration
+                                 [:temporaryOutputDirectory "true"]
+                                 [:sourceDirectories [:sourceDirectory "src"]]]
+                                [:goals [:goal "compile"]]])}]])
