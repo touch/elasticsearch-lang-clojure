@@ -9,4 +9,12 @@
                                   [log4j/log4j "1.2.16"]]}
              :provided {:dependencies [[org.elasticsearch/elasticsearch "1.7.3"]]}}
   :aot #{com.thelastcitadel.es.engine
-         com.thelastcitadel.es.plugin})
+         com.thelastcitadel.es.plugin}
+  :pom-plugins [[org.apache.maven.plugins/maven-toolchains-plugin "1.1"
+                {:executions ([:execution
+                  [:goals 
+                    [:goal toolchain]]])
+                :configuration ([:toolchains
+                  [:jdk
+                    [:version 1.7]
+                    [:vendor "oracle"]]])}]])
