@@ -89,8 +89,6 @@
         (.setNextDocId lookup (int id)))
       (^void setNextSource [_ ^java.util.Map source]
         (-> lookup (.source) (.setNextSource source)))
-      (setNextScore [this score]
-        (.setNextVar this "_score" score))
       (runAsFloat [this]
         (float (.run this)))
       (runAsLong [this]
