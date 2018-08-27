@@ -20,7 +20,7 @@
 (defn -types [_]
   types)
 
-(defn -scriptRemoved[_]
+(defn -scriptRemoved[_ _]
   )
 
 (defn -extensions [_]
