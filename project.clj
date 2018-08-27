@@ -7,6 +7,7 @@
                  [org.clojure/tools.logging "0.2.6"]]
   :profiles {:dev {:dependencies [[com.spatial4j/spatial4j "0.3"]
                                   [log4j/log4j "1.2.16"]]}
+             
              :provided {:dependencies [[org.elasticsearch/elasticsearch "1.7.3"]]}}
   :aot #{com.thelastcitadel.es.engine
          com.thelastcitadel.es.plugin}
@@ -18,7 +19,7 @@
                   [:jdk
                     [:version 1.7]
                     [:vendor "oracle"]]])}]
-                [com.theoryinpractise/clojure-maven-plugin "1.7.1"
+                [com.theoryinpractise/clojure-maven-plugin "1.8.1"
                  {:extensions "true"
                   :executions ([:execution
                                 [:id "clojure-compile"]
