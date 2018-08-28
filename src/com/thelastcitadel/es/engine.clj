@@ -36,6 +36,7 @@
                         *out* o
                         *err* e
                         *ns* (find-ns 'com.thelastcitadel.es.core)]
+                (log/error (find-ns 'com.thelastcitadel.es.core))
                 (eval (read-string (str "(binding [*ns* *ns*] (eval '(do " script " )))")))))
         out (String. (.toByteArray out))]
     (when-not (empty? out)
