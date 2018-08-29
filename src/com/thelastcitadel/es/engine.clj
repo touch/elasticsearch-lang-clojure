@@ -36,13 +36,13 @@
                         *out* o
                         *err* e
                         *ns* (find-ns 'com.thelastcitadel.es.core)]
-                (println "=============com.thelastcitadel.es.engine==========")
-                (println (pr-str (find-ns 'com.thelastcitadel.es.core)))
-                (println "=============/com.thelastcitadel.es.engine==========")
+                (.println *err* "=============com.thelastcitadel.es.engine==========")
+                (.println *err* (pr-str (find-ns 'com.thelastcitadel.es.core)))
+                (.println *err* "=============/com.thelastcitadel.es.engine==========")
                 (eval (read-string (str "(binding [*ns* *ns*] (eval '(do " script " )))")))))
         out (String. (.toByteArray out))]
     (when-not (empty? out)
-      (log/info out))
+      (.println *err* out))
     (fn [env]
       (try
         (fun env)
