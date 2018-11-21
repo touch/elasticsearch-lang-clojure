@@ -25,6 +25,9 @@
                                 [:id "clojure-compile"]
                                 [:phase "compile"]
                                 [:configuration
-                                 [:temporaryOutputDirectory "true"]
-                                 [:sourceDirectories [:sourceDirectory "src"]]]
-                                [:goals [:goal "compile"]]])}]])
+                                 [:namespaces
+                                  [:namespace "com.foo"]]
+                                 [compileDeclaredNamespaceOnly "true"]
+                                 [cleanAOTNamespaces "true"]
+                                  [:sourceDirectories [:sourceDirectory "src"]]]
+                                 [:goals [:goal "compile"]]])}]])
